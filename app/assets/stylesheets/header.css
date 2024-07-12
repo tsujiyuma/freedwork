@@ -1,0 +1,36 @@
+.app_header{
+  height: 70px;
+  width: 100vw;
+  background-color: navy;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.logo_freedwork{
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.header_username{
+  height: 20px;
+  font-size: 20px;
+  color: #ffffff;
+  
+}
+
+.header_logout_btn{
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  margin-left: 15px;
+}

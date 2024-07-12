@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!
+
 
   def index
   end
@@ -8,7 +10,14 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    
+  end
+
+
+
+private
+
+  def pj_params
+    params.require(:project).permit(:title, :goal, :date, user_ids:[])
   end
 
 end

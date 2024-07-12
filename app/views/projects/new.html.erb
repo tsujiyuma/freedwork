@@ -1,1 +1,38 @@
-プロジェクト作成ページ
+<%= render "shared/header" %>
+
+<div class="pj_gene_page">
+  <div class="pj_gene_page_box">
+    <div class="pj_gene_page_title">プロジェクト作成ページ</div>
+    <div class="pj_gene_form">
+      <%=form_with model: @project, local: true do |f|%>
+      <div class="pj_title_label">
+        <label>プロジェクト名</label>
+      </div>
+      <%= f.text_field :tile, class: 'pj_title', placeholder:"プロジェクト名を記入してください" %>
+
+      <div class="pj_goal_label">
+          <label>プロジェクト目標</label>
+      </div>
+      <%= f.text_field :goal, class: 'pj_goal', placeholder:"プロジェクト目標を記入してください" %>
+
+      <div class="pj_date">
+        <label>完工予定日：</label>
+        <%= f.date_select :goal, class: 'pj_date', placeholder:"完工予定日を入力してください",use_two_digit_numbers:true %>
+      </div>
+      <div class="pj_member_label">
+        <label>プロジェクトメンバー</label>
+      </div>
+      <select name="project[user_ids][]" multiple >
+        <option value="">チャットするユーザーを選択してください</option>
+        <% User.where.not(id: current_user.id).each do |user| %>
+          <option value=<%= user.id %>><%= user.name %></option>
+        <% end %>
+      </select>
+      <input name="project[user_ids][]" type="hidden" value=<%= current_user.id %>>
+
+      <%= f.submit "作成する", class:"pj_gene_btn"%>
+    </div> 
+  </div>
+</div>
+
+<% end %>

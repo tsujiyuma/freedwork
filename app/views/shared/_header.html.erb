@@ -1,0 +1,11 @@
+<header class="app_header">
+  <div class="logo_header">
+    <div>
+      <%= link_to "Freed Work", root_path, class: "logo_freedwork"%>
+    </div>
+    <div class="header_username" >
+      <%= current_user.name %>
+      <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class:'header_logout_btn'%>
+    </div>
+  </div>
+</header>
