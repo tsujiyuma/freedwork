@@ -3,8 +3,8 @@
 <div class="task_gene_page">
   <div class="task_gene_page_box">
     <div class="task_gene_page_title">
-      <%=form_with model: [@project,@task], url:project_tasks_path, local: true do |f|%>
       <%= @project.title %>/タスク作成ページ
+      <%=form_with model: [@project, @task], url: project_tasks_path, local: true do |f|%>
     </div>
     <div class="task_gene_form">
         <div class="task_title_label">

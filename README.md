@@ -34,7 +34,7 @@ _7.0.0_
 
 - has_many :projects_users
 - has_many :projects, through: :project_users
-- belongs_to :comment
+- has_many :comments
 
 # project_users_table
 |column            |Type       |Options                 |
@@ -74,5 +74,5 @@ _7.0.0_
 |user              |references |null:false, foreign_key: true |
 
 - beolngs_to :task
-- has_many :users
+- belongs_to :user
 

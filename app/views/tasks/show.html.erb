@@ -36,3 +36,20 @@
     </div>
   </div>
 </div>
+
+<div class="comment_page">
+  <div class="comment_list">
+   <% @task.comments.each do |comment| %>
+      <div class="comment_username">
+          <%= comment.user.name %>：
+          <%= comment.comment %>
+          <%= comment.created_at.strftime("%Y/%m/%d %H:%M:%S") %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class= "comment_new_btn"> 
+    <%= link_to "コメント/フィードバックする", new_project_task_comment_path(@project, @task), class:"comment_new_btn" %>
+</div>
+
