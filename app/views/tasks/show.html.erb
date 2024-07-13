@@ -1,0 +1,38 @@
+<%= render "shared/header" %>
+<div class="task_show_pjname">
+<%= @project.title %>
+</div>
+<div class="task_show_tkname">
+<%= @task.title %>
+</div>
+
+<div class="task_show_page">
+  <div class="task_show_page_box">
+    <div class="task_show_form">
+      <div class="task_show_title_label">
+        <label>タスク名</label>
+      </div>
+      <div class='task_show_title' >
+        <%= @task.title %>
+      </div>
+      <div class="task_show_aim_label">
+          <label>目標</label>
+      </div>
+      <div class="task_show_aim">
+        <%= @task.aim %>
+      </div>
+      <div class="task_show_date_label">
+        <label>実施日</label>
+      </div>
+      <div class="task_show_date">
+        <%= @task.date %>
+      </div>
+      <div class="task_show_content_label">
+        <label>内容</label>
+      </div>
+      <div class="task_show_content">
+        <%= @task.content%>
+      </div>
+    </div>
+  </div>
+</div>

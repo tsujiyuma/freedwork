@@ -33,5 +33,28 @@
   justify-content: center;
   align-items: center;
   margin: 15px 0 0 5px;
+}
 
+.task_lists_label{
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+
+.tasks{
+  background-color: #DCDCDC;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5px;
+}
+
+.tasks_title{
+  width: 30%;
+}
+.tasks_aim{
+  width: 55%;
+}
+.tasks_date{
+  width: 15%;
 }

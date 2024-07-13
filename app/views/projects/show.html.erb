@@ -18,6 +18,22 @@
             </div>
           </div>
         </div>
+        <div class="task_lists">
+          <div class= "task_lists_label">
+            タスク一覧
+          </div>
+          <div class= "task_list">
+            <% @project.tasks.each do |task| %>
+            <div class= "tasks">
+              <div class="tasks_title">名称：<%=link_to task.title, project_task_path(@project, task) %></div>
+              <div class="tasks_aim">目標/ねらい：<%= task.aim %></div>
+              <div class="tasks_date">実施日：<%= task.date %></div>
+            </div>
+            <% end %>
+
+          </div>
+
+        </div> 
   </div>
   <div class="show_side" >
     <div class="task_new_link">
