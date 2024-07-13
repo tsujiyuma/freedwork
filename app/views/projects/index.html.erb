@@ -1,4 +1,26 @@
 <%= render "shared/header" %>
-<%= render "shared/side_bar" %>
-  
 
+<div class="project_index">
+
+  <div class="side_bar">
+    <div class="chat_gene_box">
+      <%= link_to "新規プロジェクトの作成", new_project_path, class:"chat_gene"%>
+    </div>  
+    <div class="side_bar_title">
+      プロジェクト一覧
+    </div>
+
+    <div class="pj_lists">
+    <% current_user.projects.each do |project| %>
+      <div class="pj_list">
+        <div class="pj_name">
+          <%= link_to project.title, project_path(project.id), class:"pj_name" %>
+        </div>
+      </div>
+    <% end %>
+    </div>
+  </div>
+  <div class="task_index">
+  </div> 
+  
+</div>

@@ -1,0 +1,91 @@
+.task_show_pjname{
+  height: 50px;
+  width: 100vw;
+  margin-top: 15px;
+  background-color: #C0C0C0;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.task_show_tkname{
+  width: 100vw;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+
+.task_show_page{
+  display: flex;
+  justify-content: center;
+}
+
+
+.task_show_page_box{
+  width: 700px;
+  border: 1px, solid, black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task_show_form{
+  width: 100%;
+  margin-left: 100px;
+}
+
+.task_show_title_label{
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.task_show_title{
+  height: 40px;
+  width: 100%;;
+}
+
+.task_show_aim_label{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.task_show_aim{
+  height: 40px;
+  width: 100%;
+}
+
+.task_show_date_label{
+  margin-top: 10px;
+  font-size: 20px; 
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+
+.task_show_date{
+  height: 40px;
+  width: 100%;
+}
+
+.task_show_content_label{
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+}
+
+.task_show_content{
+  height: 100%;
+  width: 100%;
+  margin-bottom: 10px;
+}

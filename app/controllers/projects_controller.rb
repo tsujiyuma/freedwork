@@ -1,7 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :authenticate_user!
 
-
   def index
   end
 
@@ -22,6 +21,10 @@ class ProjectsController < ApplicationController
       puts @project.errors.full_messages
       render :new
     end
+  end
+
+  def show
+    @project = Project.find(params[:id])
   end
 
 

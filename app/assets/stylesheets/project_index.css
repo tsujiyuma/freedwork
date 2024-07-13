@@ -1,6 +1,10 @@
+.project_index{
+  display: flex;
+}
 
+/* side_bar */
 .side_bar{
-  height: calc(100vh - 30px);
+  height:100vh;
   width: 300px;
   background-color:#A9A9A9;
   display: flex;
@@ -46,5 +50,25 @@
 a{
   text-decoration: none;
   color: black;
+}
+
+/* main */
+
+.project_main{
+  height: 100vh;
+  width: 100vw;
+}
+
+.task_gene_box{
+  height: 30px;
+  width: 100px;
+  border:1px solid black;
+  text-align: center;
+  padding-top:5px;
+  justify-content: right;
+}
+
+.task_gene{
+  font-weight: bold;
 
 }
