@@ -1,10 +1,26 @@
 class TasksController < ApplicationController
 
   def new
-    @task = Task.new
+    @project = Project.find(params[:project_id])
+    @task = @project.tasks.new
+  end
+
+  def create
+    @task = Task.new(tk_params)
+    if @task.save
+      redirect_to root_path
+    else
+      render 'new'
+    end
   end
 
   def show
   end
 
+
+  private
+
+  def tk_params
+    params.require(:task).permit(:title, :aim, :date, :content).merge(project_id: params[:project_id])
+  end
 end

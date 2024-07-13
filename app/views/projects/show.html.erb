@@ -1,0 +1,27 @@
+<%= render "shared/header" %>
+
+<div class="show_layout">
+  <div class="project_show">
+        <div class="pj_show_list">
+          <div class="pj_show">
+            <div class="pj_show_title">  
+              プロジェクト名：
+              <%= @project.title %>
+            </div>
+            <div class="pj_show_goal">
+              プロジェクト目標：
+              <%= @project.goal %>
+            </div>
+            <div class="pj_show_date">
+              完工予定日：
+              <%= @project.date %>
+            </div>
+          </div>
+        </div>
+  </div>
+  <div class="show_side" >
+    <div class="task_new_link">
+      <%= link_to "タスク作成", new_project_task_path(params[:id]),class:"task_new_name" %>
+    </div>  
+  </div>
+</div>
