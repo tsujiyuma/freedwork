@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def new
     @project = Project.find(params[:project_id])
     @comment = Comment.new
@@ -17,10 +16,9 @@ class CommentsController < ApplicationController
     end
   end
 
-private
+  private
 
   def com_params
     params.require(:comment).permit(:comment).merge(user_id: current_user.id)
   end
-
 end

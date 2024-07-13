@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-
   def new
     @project = Project.find(params[:project_id])
     @task = @project.tasks.new
@@ -20,7 +19,6 @@ class TasksController < ApplicationController
     @project = Project.find(params[:project_id])
     @task = Task.find(params[:id])
   end
-
 
   private
 

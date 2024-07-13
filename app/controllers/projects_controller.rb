@@ -13,9 +13,9 @@ class ProjectsController < ApplicationController
 
     if @project.save
       user_ids = pj_params[:user_ids]
-        user_ids.each do |user_id|
-          ProjectUser.create(project_id: @project.id, user_id: user_id)
-        end
+      user_ids.each do |user_id|
+        ProjectUser.create(project_id: @project.id, user_id:)
+      end
       redirect_to root_path
     else
       puts @project.errors.full_messages
@@ -27,12 +27,9 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
-
-
-private
+  private
 
   def pj_params
     params.require(:project).permit(:title, :goal, :date, user_ids: [])
   end
-
 end
