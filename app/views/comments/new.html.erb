@@ -1,1 +1,16 @@
 <%= render "shared/header" %>
+
+<div class="comment_form">
+<%=form_with model: [@project, @task, @comment],url:project_task_comments_path, local: true do |f|%>
+  <div class="comment_user">
+    ユーザー名：
+  <%= current_user.name %>
+  </div>
+<div class="comment_content_form">
+<%= f.text_area :comment ,class:"comment_content", placeholder:"コメントやフィードバックを記入してください"%>
+</div>
+
+<%= f.submit "コメント/フィードバックする", class:"comment_btn"%>
+
+<% end %>
+</div>

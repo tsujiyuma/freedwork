@@ -1,0 +1,17 @@
+.comment_form{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.comment_user{
+  width: 800px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.comment_content{
+  margin-top: 10px;
+  height:100%;
+  width: 100%;
+}

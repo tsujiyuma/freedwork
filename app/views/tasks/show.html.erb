@@ -39,15 +39,16 @@
 
 <div class="comment_page">
   <div class="comment_list">
-    <% @project.users.each do |user| %>
+   <% @task.comments.each do |comment| %>
       <div class="comment_username">
-        <%= user.name %>：
-        <%# <%= user.comment%>
+          <%= comment.user.name %>：
+          <%= comment.comment %>
       </div>
     <% end %>
   </div>
 </div>
 
 <div class= "comment_new_btn"> 
-    <%= link_to "フィードバックする", new_project_comment_path, class:"comment_new_btn" %>
+    <%= link_to "コメント/フィードバックする", new_project_task_comment_path(@project, @task), class:"comment_new_btn" %>
 </div>
+
