@@ -6,10 +6,12 @@ class TasksController < ApplicationController
   end
 
   def create
+    @project = Project.find(params[:project_id])
     @task = Task.new(tk_params)
     if @task.save
       redirect_to root_path
     else
+      puts @task.errors.full_messages
       render 'new'
     end
   end
